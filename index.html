@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sfilata - Streaming Esclusivo</title>
+
+  <!-- Pre-connessione ai server Vimeo per velocizzare il caricamento del video -->
+  <link rel="preconnect" href="https://player.vimeo.com">
+  <link rel="preconnect" href="https://f.vimeocdn.com">
+
+  <style>
+    /* Reset essenziale e stili base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Container principale con larghezza massima */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Titolo/Brand sopra il video (Opzionale) */
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Contenitore responsive in formato 16:9 */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* Rapporto d'aspetto 16:9 */
+      height: 0;
+      background-color: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Footer essenziale */
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header facoltativo -->
+    <header class="header">
+      <h1>Sfilata Moda</h1>
+    </header>
+
+    <!-- Player Video Vimeo Responsive -->
+    <main class="video-wrapper">
+      <iframe 
+        src="https://player.vimeo.com/video/1121601073?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+        title="Sfilata Video">
+      </iframe>
+    </main>
+
+    <!-- Footer facoltativo -->
+    <footer class="footer">
+      <p>&copy; Tutti i diritti riservati</p>
+    </footer>
+  </div>
+
+</body>
+</html>
